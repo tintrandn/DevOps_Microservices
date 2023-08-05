@@ -1,5 +1,8 @@
 <include a CircleCI status badge, here>
 
+## Cicle CI:
+[![CircleCI](https://circleci.com/gh/tintrandn/DevOps_Microservices/tree/master.svg?style=svg)](https://app.circleci.com/pipelines/github/tintrandn/DevOps_Microservices?branch=master)
+
 ## Project Overview
 
 In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
@@ -25,9 +28,24 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 ## Setup the Environment
 
-* Create a virtualenv with Python 3.7 and activate it. Refer to this link for help on specifying the Python version in the virtualenv. 
+* Create a virtualenv with Python 3.7.17 and activate it. Refer to this link for help on specifying the Python version in the virtualenv. 
 ```bash
-https://fathomtech.io/blog/python-environments-with-pyenv-and-vitualenv/
+Follow the guide at this link: (https://fathomtech.io/blog/python-environments-with-pyenv-and-vitualenv/)
+1. Install pyenv and pyenv-virtualenv
+brew install pyenv
+brew install pyenv-virtualenv
+2. Update zshrc file
+# pyenv setup
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$PYENV_ROOT/shims:${PATH}"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+3. Run command
+pyenv install 3.7.17
+pyenv virtualenv 3.7.17 devops
+pyenv activate devops 
+
 ```
 * Run `make install` to install the necessary dependencies
 
